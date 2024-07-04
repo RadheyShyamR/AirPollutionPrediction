@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+          @import url(https://fonts.googleapis.com/css?family=Abel);
+
+          body {
+            background-color: #000;
+            font-family: "Abel";
+            font-size: 20px;
+            line-height: 30px;
+          }
+          h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+          }
+          section {
+            padding: 120px 40px 0;
+            position: relative;
+            overflow: hidden;
+          }
+          section:first-of-type {
+            padding-top: 50px;
+          }
+          section:before {
+            content: " ";
+            position: absolute;
+            top: -115px;
+            left: 0;
+            height: 60px;
+            right: 0;
+            transform-origin: 0 0 0;
+            transform: rotate(calc(100vw*2)deg) scale(2);
+          }
+          section > .content {
+            padding: 20px 20px 100px;
+            position: relative;
+          }
+          .white,
+          .white + *:before {
+            background-color: #FFF;
+            color: #000;
+          }
+          .grey,
+          .grey + *:before {
+            background-color: #2E2E2E;
+            color: #fff;
+          }
+  </style>
+</head>
+<body>
+
+  <section class="grey">
+    <div class="content">
+      <h1>BASE PAPER DEMERITS</h1>
+      <p>•	There are not using machine learning technique.</p>
+      <p>•	Their process require more complex to do that. </p>
+      <p>•	They did not do deployment process.</p>
+      <p>•	The accuracy level and performance level are low. </p>
+    </div>
+  </section>
+  <section class="white">
+    <div class="content">
+      <h1>PROPOSED SYSTEM MERITS</h1>
+      <p>•	We using machine learning techniques for build a statistical predictive model.</p>
+      <p>•	We compare more than two algorithm for comparative analysis. </p>
+      <p>•	We done a Full-stack application for deployment purposes.</p>
+      <p>•	We improve the accuracy & performance level.</p>
+    </div>
+  </section>
+  
+
+  
+  
+</body>
+</html>

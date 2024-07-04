@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Form</title>
+        <style>
+                *variables*/
+                :root {
+                    --color-white: #f3f3f3;
+                    --color-darkblue: #1b1b32;
+                    --color-darkblue-alpha: rgba(27,27,50,0.8);
+                    --color-green: #37af65;
+                }
+
+                /*reset*/
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+
+                body {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.4;
+                    color: var(--color-white, white);
+                    background-color: var(--color-darkblue);
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    background-image: 
+                    url("/static/images/D4.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+
+
+                h1, p, label, button {
+                    color: var(--color-white);
+                }
+
+                input, select, textarea, button {
+                    border: none;
+                    outline: none;
+                    color: rgb(73, 80, 87);
+                }
+
+                /*container*/
+                .container {
+                    max-width: 720px;
+                    margin: 3.125rem auto 0 auto;
+                }
+
+                .text-center {
+                    text-align: center;
+                }
+
+                /*header*/
+                .container .header {
+                    padding: 0 0.625rem;
+                    margin-bottom: 1.875rem;
+                }
+
+                .container .header #title {
+                    line-height: 1.2;
+                    font-size: 2rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                .container .header .description {
+                    font-size: 1.125rem;
+                    font-style: italic;
+                    font-weight: 200;
+                }
+
+
+                /*form*/
+                .container #survey-form {
+                    border-radius: 5px;
+                    background-color: var(--color-darkblue-alpha);
+                    padding: 2.5rem;
+                    margin-bottom: 2rem;
+                }
+
+                .container #survey-form .form-group {
+                    margin: 0 auto 1.25rem auto;
+                    padding: 0.25rem;
+                }
+
+                .container #survey-form .form-group label, 
+                .container #survey-form .form-group p {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.125rem;
+                    margin-bottom: 0.5rem 
+                }
+
+                .container #survey-form .form-group input,
+                .container #survey-form .form-group select,
+                .container #survey-form .form-group textarea {
+                    font-size: 1rem;
+                    padding: 0.375rem 0.75rem;
+                    color: #494949;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #ced4da;
+                    border-radius: 0.25rem;
+                    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                }
+
+                .container #survey-form .form-group .form-control {
+                    display: block;
+                    width: 100%;
+                    height: 2.375rem;        
+                }
+
+                .container #survey-form .form-control:focus{
+                    border-color: #80bdff;
+                    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                }
+
+                .container #survey-form .form-group .input-radio, 
+                .container #survey-form .form-group .input-checkbox {
+                    margin-right: 0.625rem;
+                    min-height: 1.25rem;
+                    min-width: 1.25rem;
+                }
+
+                .container #survey-form .form-group .input-textarea {
+                    width: 100%;
+                    font-size: 1.07rem;
+                    min-height: 120px;
+                    padding: 0.625rem;
+                    resize: vertical;
+                }
+
+                .container #survey-form .form-group .input-textarea:focus{
+                    border-color: #80bdff;
+                    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                }
+
+                .container #survey-form .form-group .submit-button {
+                    width: 100%;
+                    padding: 0.75rem;
+                    background-color: var(--color-green, rgb(20, 190, 70));
+                    color: var(--color-white);
+                    border-radius: 2px;
+                    cursor: pointer;
+                    transition: background-color .15s ease;
+                    font-size: 1.125rem;
+                    font-weight: 400;
+                }
+
+                .container #survey-form .form-group .submit-button:hover {
+                    background-color: #358f58;
+                }
+
+
+
+
+        </style>
+
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,200;1,400&display=swap" rel="stylesheet">
+
+        <!--css
+        <link rel="stylesheet" href="./src/style/style.css">
+        -->
+
+      </head>
+      <body>
+  
+          <div class="container">
+              <header class="header"> 
+                  <p id="title" class="text-center" style="font-size: 30px; color: rgb(240, 236, 236);">ANALYSE & PREDICT THE AIR POLLUTION IN INDIA USING MEMORY-BASED LEARNING APPROACHES.</p><br>
+                  <!-- <i><h2 id="title" class="text-center" style="color:rgb(207, 13, 13);">WELCOME TO THIS SITE</h2><br></i> -->
+                  <!-- <h2 id="title" class="text-center" style="font-size: 30px;">Model deployment is the process of implementing a fully functioning machine learning model into production where it can make predictions based on data. Users, developers, and systems then use these predictions to make practical business decisions.
+                  </h2> -->
+              </header>
+
+              <div>
+                <center><a href="{% url 'Home_4' %}" style="color:white;"><h2><b>HOME</b></h2></a></center>
+              </div>
+
+      
+              <form id="survey-form" method="POST" action="">
+                  {% csrf_token %}
+  
+                  
+                <div class="form-group">
+                  <label id="name-label" for="name">PM2.5</label>
+                  <input type="number" name="PM2.5" id="PM2.5" class="form-control" placeholder="PM2.5" required >
+                </div>
+  
+                <div class="form-group">
+                  <label id="name-label" for="name">PM10</label>
+                  <input type="number" name="PM10" id="PM10" class="form-control" placeholder="PM10" required>
+                </div>
+
+                <div class="form-group">
+                  <label id="name-label" for="name">NO</label>
+                  <input type="number" name="NO" id="NO" class="form-control" placeholder="NO" required >
+                </div>
+
+                <div class="form-group">
+                  <label id="name-label" for="name">NO2</label>
+                  <input type="number" name="NO2" id="NO2" class="form-control" placeholder="NO2" required>
+                </div>
+
+                <div class="form-group">
+                  <label id="name-label" for="name">NOx</label>
+                  <input type="number" name="NOx" id="NOx" class="form-control" placeholder="NOx" required >
+                </div>
+
+                <div class="form-group">
+                  <label id="name-label" for="name">NH3</label>
+                  <input type="number" name="NH3" id="NH3" class="form-control" placeholder="NH3" required >
+                </div>
+
+                <div class="form-group">
+                  <label id="name-label" for="name">CO</label>
+                  <input type="number" name="CO" id="CO" class="form-control" placeholder="CO" required>
+                </div>
+
+                <div class="form-group">
+                  <label id="name-label" for="name">SO2</label>
+                  <input type="number" name="SO2" id="SO2" class="form-control" placeholder="SO2" required >
+                </div>
+
+                <div class="form-group">
+                  <label id="name-label" for="name">O3</label>
+                  <input type="number" name="O3" id="O3" class="form-control" placeholder="O3" required>
+                </div>
+            
+                <div class="form-group">
+                   <label id="name-label" for="name">Benzene</label>
+                   <input type="number" name="Benzene" id="Benzene" class="form-control" placeholder="Benzene" required >
+                </div>
+
+                <div class="form-group">
+                  <label id="name-label" for="name">Toluene</label>
+                  <input type="number" name="Toluene" id="Toluene" class="form-control" placeholder="Toluene" required>
+                </div>
+        
+                <div class="form-group">
+                  <label id="name-label" for="name">Xylene</label>
+                  <input type="number" name="Xylene" id="Xylene" class="form-control" placeholder="Xylene" required >
+                </div>
+
+                <div class="form-group">
+                  <label id="name-label" for="name">AQI</label>
+                  <input type="number" name="AQI" id="AQI" class="form-control" placeholder="AQI" required >
+                </div>
+
+                <div class="form-group">
+                  <button type="submit" class="submit-button">SUBMIT</button>
+                </div> 
+
+              </form>
+                
+      
+      
+    </head>
+    <body>       
+</body>
+</html>
+    
+</body>
+</html>
+
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+    
+        
+
+
+
+
+
+                
+                    {% comment %} <div class="form-group">
+                    <label for="dropdown">Gender</label>
+                    <select name="Gender" id="Gender" class="form-control" required>
+                        <option value=0>Female</option>
+                        <option value=1>Male</option>
+                    </select>
+                </div> {% endcomment %}
